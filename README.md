@@ -111,6 +111,6 @@ A large collection of images grouped by success is available in the archive and 
 ## Acknowledgement
 This assignment is a component of the Image Processing course at Utrecht University  
 
-![uulogo](https://www.uu.nl/sites/default/files/styles/image_385x257/public/images/cm-hs-logouk_0.png?itok=ksQQmUjM&timestamp=1456131599")
+![uulogo](https://www.heilijgers.nl/wp-content/uploads/2018/02/Universiteit-Utrecht-logo.png)
 
 Lecturer: [Dr. ir. R.W. Poppe](https://www.uu.nl/staff/RWPoppe)
