@@ -108,7 +108,7 @@ A large collection of images grouped by success is available in the archive and 
 
 * **False Positives & True Negatives**. Finding false positives was actually a challenge. Images of the Eiffel Tower, Bottles, The Washington Monument and deodorant do not get through the flood fill filtering stage. These have been included in the archive. Although they resemble the shape of street poles, intersections and ratio are different enough that they will not be detected. However, any image with a big amount of complexity lines (e.g. animals, hair, fences, etc.) will overload our program when it is trying to find pairs and flood fill. Most likely resulting in a stack overflow of the recursive call. This can be mitigated by introducing limits as a stop condition.
 
-## Acknoledgement
+## Acknowledgement
 This assignment is a component of the Image Processing course at Utrecht University  
 
 ![uulogo](https://www.uu.nl/sites/default/files/styles/image_385x257/public/images/cm-hs-logouk_0.png?itok=ksQQmUjM&timestamp=1456131599")
