@@ -6,7 +6,9 @@ Implemented without any libraries other than those provided by C#
 ## Introduction
 An Amsterdammertje is the typical red-brown steel traffic bollard that is used to separate the sidewalk from the street in Amsterdam. Amsterdammertje is Dutch for 'little one from Amsterdam'. The bollards have the three Saint Andrew's Crosses from the coat of arms of Amsterdam.
 
-![Amsterdammetje Example](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Amsterdammertje.jpg/250px-Amsterdammertje.jpg)
+<p align="center"> 
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Amsterdammertje.jpg/250px-Amsterdammertje.jpg">
+</p>
 
 ## Algorithm Description
 This program detects waist-high bollards on the street and pavement in images that can be sourced from Google Maps. Given this angle, we are looking for bollards/poles that appear to (or actually do) get narrower towards the top of the image. Note that [Hagenaars](https://nl.wikipedia.org/wiki/Hagenaar_(paaltje)) also fit this criterium. 
