@@ -91,9 +91,17 @@ Pairs that intersect in a positive `y` coordinate are discarded as they do not a
   <img src="https://i.imgur.com/Flr3rwM.png">
 </p>
 
-* _Final drawing_. The areas bordered by the bounding boxes in the y direction and the paired lines in the x direction are colored inon the original image to show the detected poles as seen in the following image.
+* _Final drawing_. The areas intersected by the bounding boxes in the `y` direction and the paired lines in the `x` direction are colored in on the original image to show the detected poles as seen in the following image.
 
 <p align="center">
   <img src="https://i.imgur.com/EdU7Drl.png">
 </p>
 
+## Results of Manual Assessment & Future Work suggestions 
+A large collection of images grouped by success is available in the archive and are organized as follows  
+
+* **True positives**. Many of the images resulting in true positives had a clear foreground and background, or a relatively large differ-ence in local contrast between the pole and the pavement. They were often pictures from a somewhat high angle,so the background was solely pavement with no angles of buildings to get in the way.  Two exceptions were darkpoles with bright backgrounds, resulting in particularly strong local contrast and thus a high likely hood of edgesbeing properly detected.
+
+* **False Negatives**. Noise is a huge problem. Despite our best efforts (canny edge with Otsu’s method and a bilateral filter) some edgesare not strong enough to be detected by our Hough Transform.
+
+* **False Positives & True Negatives**. Finding false positives was actually a challenge. Images of the Eiffel Tower, Bottles,  The Washington Monument and deodorant do not get through the flood fill filtering stage. These have been included in the archive.   Although they resemble the shape of street poles, intersections and ratio are different enough that they will not be detected. However, any image with a big amount of complexity lines (e.g.  animals, hair, fences, etc.) will overload our program when it is trying to find pairs and flood fill. Most likely resulting in a stack overflow of the recursive call. This can be mitigated by introducing limits as a stop condition.
