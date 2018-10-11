@@ -46,7 +46,7 @@ This program detects waist-high bollards on the street and pavement in images th
   </p>
 
 **Edge Detection**  
-Canny edge detection is used to produce an edge map of the previous step, with edges of width `1`. This is to facilitate a faster and more accurate Hough Transform. Our implementation is slightly adapted. Instead of using a gaussian blur before applying sobels, we use a bilateral filter with a fixed `σ = 80`.  The `t`<sub>high</sub> argument is for our Canny Edge detectionm, which is determined by using Otsu’s method on the grayscale input image.
+Canny edge detection is used to produce an edge map of the previous step, with edges of width `1`. This is to facilitate a faster and more accurate Hough Transform. Our implementation is slightly adapted. Instead of using a gaussian blur before applying sobels, we use a bilateral filter with a fixed `σ = 80`.  The `t`<sub>high</sub> argument is for our Canny Edge detection, which is determined by using Otsu’s method on the grayscale input image.
 
 Example of Canny Edge detection with `q = 85` and `σ = 80`
 <p align="center">
@@ -102,8 +102,8 @@ Pairs that intersect in a positive `y` coordinate are discarded as they do not a
 ## Results of Manual Assessment & Future Work suggestions 
 A large collection of images grouped by success is available in the archive and are organized as follows  
 
-* **True positives**. Many of the images resulting in true positives had a clear foreground and background, or a relatively large differ-ence in local contrast between the pole and the pavement. They were often pictures from a somewhat high angle,so the background was solely pavement with no angles of buildings to get in the way.  Two exceptions were darkpoles with bright backgrounds, resulting in particularly strong local contrast and thus a high likely hood of edgesbeing properly detected.
+* **True positives**. Many of the images resulting in true positives had a clear foreground and background, or a relatively large difference in local contrast between the pole and the pavement. They were often pictures from a somewhat high angle, so the background was solely pavement with no angles of buildings to get in the way. Two exceptions were darkpoles with bright backgrounds, resulting in particularly strong local contrast and thus a high likely hood of edges being properly detected.
 
-* **False Negatives**. Noise is a huge problem. Despite our best efforts (canny edge with Otsu’s method and a bilateral filter) some edgesare not strong enough to be detected by our Hough Transform.
+* **False Negatives**. Noise is a huge problem. Despite our best efforts (canny edge with Otsu’s method and a bilateral filter) some edges are not strong enough to be detected by our Hough Transform.
 
-* **False Positives & True Negatives**. Finding false positives was actually a challenge. Images of the Eiffel Tower, Bottles,  The Washington Monument and deodorant do not get through the flood fill filtering stage. These have been included in the archive.   Although they resemble the shape of street poles, intersections and ratio are different enough that they will not be detected. However, any image with a big amount of complexity lines (e.g.  animals, hair, fences, etc.) will overload our program when it is trying to find pairs and flood fill. Most likely resulting in a stack overflow of the recursive call. This can be mitigated by introducing limits as a stop condition.
+* **False Positives & True Negatives**. Finding false positives was actually a challenge. Images of the Eiffel Tower, Bottles, The Washington Monument and deodorant do not get through the flood fill filtering stage. These have been included in the archive. Although they resemble the shape of street poles, intersections and ratio are different enough that they will not be detected. However, any image with a big amount of complexity lines (e.g. animals, hair, fences, etc.) will overload our program when it is trying to find pairs and flood fill. Most likely resulting in a stack overflow of the recursive call. This can be mitigated by introducing limits as a stop condition.
