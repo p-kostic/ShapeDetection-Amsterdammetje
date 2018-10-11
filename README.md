@@ -67,7 +67,7 @@ The red lines in the image above denote the average of the two lines’ mean `x`
 Pairs that intersect in a positive `y` coordinate are discarded as they do not approach each other to the top, which a pole in our chosen context would.
 
 **Finding the Horizontal Boundaries of the Pole**
-* Thicker edges are detected in the original bilaterally filtered gray scale image using 4 Sobel convolution kernels. A threshold based on Otsu’s method with `q = 86` is applied to that image, which results in the following image
+* Thicker edges are detected in the original bilaterally filtered gray scale image using 4 Sobel convolution kernels. A threshold based on Otsu’s method with `q = 86` is applied to that image, which results in the following image.
 
 <p align="center">
   <img src="https://i.imgur.com/PWBxynp.png">
@@ -91,7 +91,7 @@ Pairs that intersect in a positive `y` coordinate are discarded as they do not a
   <img src="https://i.imgur.com/Flr3rwM.png">
 </p>
 
-* _Final drawing_. The areas bordered by the bounding boxes in the y direction and the paired lines in the x direction are colored inon the original image to show the detected poles as seen in Figure 10.
+* _Final drawing_. The areas bordered by the bounding boxes in the y direction and the paired lines in the x direction are colored inon the original image to show the detected poles as seen in the following image.
 
 <p align="center">
   <img src="https://i.imgur.com/EdU7Drl.png">
