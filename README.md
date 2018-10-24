@@ -21,7 +21,7 @@ This program detects waist-high bollards on the street and pavement in images th
 | Criterium              | Possible Values                                                                                       |
 |------------------------|-------------------------------------------------------------------------------------------------------|
 | Minimum / maximum size | More than 140 pixels tall                                                                             |
-| Lightning variations   | The poles have to be differing in  intensity from their local background. Both bright and cloudy days |
+| Lighting variations   | The poles have to be differing in  intensity from their local background. Both bright and cloudy days |
 | Rotation variations    | Between 0.25π and 0.75π in upright position                                                           |
 | Occlusion              | Occlusion is acceptable as long as most of the pole's sides are still visible                         |
 | Other                  | Pole should get narrower towards the top                                                              |
