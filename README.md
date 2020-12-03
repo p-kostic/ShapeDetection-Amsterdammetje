@@ -7,6 +7,8 @@ Shape Detection Algorithm for Recognizing those famous Traffic Bollards found in
 
 Implemented without any libraries other than those provided by C#
 
+Final grade: 9.5 out of 10
+
 ## Introduction
 An Amsterdammertje is the typical red-brown steel traffic bollard that is used to separate the sidewalk from the street in Amsterdam. Amsterdammertje is Dutch for 'little one from Amsterdam'. The bollards have the three Saint Andrew's Crosses from the coat of arms of Amsterdam.
 
