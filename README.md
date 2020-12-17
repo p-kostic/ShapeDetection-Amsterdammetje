@@ -2,10 +2,11 @@
 ![forks](https://img.shields.io/github/forks/p-kostic/ShapeDetection-Amsterdammetje.svg)
 ![stars](https://img.shields.io/github/stars/p-kostic/ShapeDetection-Amsterdammetje.svg)
 ![license](	https://img.shields.io/github/license/p-kostic/ShapeDetection-Amsterdammetje.svg)
+
 # Shape Detection: Amsterdammertje
 Shape Detection Algorithm for Recognizing those famous Traffic Bollards found in Amsterdam  
 
-Implemented without any libraries other than those provided by C#
+Implemented in WinForms, without any libraries other than those provided by C#
 
 Final grade: 9.5 out of 10
 
@@ -20,10 +21,13 @@ An Amsterdammertje is the typical red-brown steel traffic bollard that is used t
 This program detects waist-high bollards on the street and pavement in images that can be sourced from Google Maps. Given this angle, we are looking for bollards/poles that appear to (or actually do) get narrower towards the top of the image. Note that [Hagenaars](https://nl.wikipedia.org/wiki/Hagenaar_(paaltje)) also fit this criterium. 
 
 ### Context Table
+
+Image can be at most 512x512
+
 | Criterium              | Possible Values                                                                                       |
 |------------------------|-------------------------------------------------------------------------------------------------------|
-| Minimum / maximum size | More than 140 pixels tall                                                                             |
-| Lighting variations   | The poles have to be differing in  intensity from their local background. Both bright and cloudy days |
+| Minimum / maximum size | Pole(s) must be more than 140 pixels tall                                                             |
+| Lighting variations    | The poles have to be differing in  intensity from their local background. Both bright and cloudy days |
 | Rotation variations    | Between 0.25π and 0.75π in upright position                                                           |
 | Occlusion              | Occlusion is acceptable as long as most of the pole's sides are still visible                         |
 | Other                  | Pole should get narrower towards the top                                                              |
